@@ -1,0 +1,38 @@
+﻿1234.mn javascript
+93 хичээл Map ашиглаж translate хийж болж магадгүй юм 
+	key 		value 
+	хот 		улааыаатар 
+
+
+// learn 93. Map өгөгдлийн бүтцийг ашиглах.
+// Шинэ өгөгдлийн төрөлтэй танилцана уу 
+
+// Map гэдэг өгөгдлийг тодорхой бүтэцтэйгээр хадгалдаг. Key value гэсэн утга авдаг.  
+let dict = new Map();
+
+dict.set('language', 'хэл');
+dict.set('car', 'машин');
+dict.set('sun', 'нар');
+dict.set('аав', 'father');
+dict.set(1, 'one');
+console.log(dict)
+console.log(dict.get("language"))
+
+dict.delete("language") // Map дотороос бас  хэдэн үг байгааг харуулж байна. 
+console.log(dict.size); // Map дотор хэдэн үг байгааг харуулж байна. 
+console.log(dict.has("car")) // Тийм юм байна уу гэж хайх. Байвал true байхгүй бол false 
+
+/******************************************************************* */
+// forEach давталт агшиглах  dict дотор юу байгааг харуулах гэж байна. 
+dict.forEach((value, key) => console.log(key + "====> " + value) )
+/******************************************************************** */
+
+// ES6 For ... of давталт агшиглах 
+for (let el of dict){
+  console.log(el)
+  // console.log(el[1]) //Энэ болохоор массивын index -ээр хэвлэж байна. 
+}
+// For ... of a b утга өгөөд задалж харуулж байна. 
+for (let [a, b] of dict){
+  console.log(a  + "утга нь : " + b )
+  }
