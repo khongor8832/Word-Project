@@ -1,7 +1,40 @@
-/* .container {
-  width: 900px;
-  background-color: #eeebeb;
-} */
+:root {
+  --primary-color: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  background-color: var(--primary-color);
+}
+.a {
+  color: #333;
+}
+.main-nav {
+  background: var(--primary-color);
+}
+.main-nav .container {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  padding: 1rem;
+  align-items: center;
+}
+.main-nav .container .social {
+  background-color: #777;
+  color: black;
+  padding: 100px;
+}
+/* inputbox -ын хэсэг */
+.bottom {
+  background-color: orange;
+  justify-items: center;
+}
+/* Хүснэгтийн хэсэг */
 .grid {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
