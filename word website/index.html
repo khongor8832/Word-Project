@@ -8,6 +8,7 @@
       src="https://kit.fontawesome.com/1ed880adf1.js"
       crossorigin="anonymous"
     ></script>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&display=swap" rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
       rel="stylesheet"
@@ -18,55 +19,88 @@
 
   <body>
     <!-- Navbar -ын хэсэг  -->
-    <nav class="main-nav">
+    <nav class="nav">
       <div class="container">
-        <img src="/image.jpg" alt="My Vocalbulary" class="logo" />
-        <div class="social">
-          <a href="https://www.facebook.com/" target="_blank"
-            ><i class="fab fa-facebook fa-2x"></i
-          ></a>
-          <a href="https://www.twitter.com/" target="_blank"
-            ><i class="fab fa-twitter fa-2x"></i
-          ></a>
-          <a href="https://www.instagram.com/" target="_blank"
-            ><i class="fab fa-instagram fa-2x"></i
-          ></a>
-          <a href="https://www.youtube.com/" target="_blank"
-            ><i class="fab fa-youtube fa-2x"></i
-          ></a>
+        <div class="logo"> 
+          <h1 >Words</h1>
+          <!-- <img src="./image1.jpg" alt="logo" class="logo" /> -->
+        </div>
+
+        <div>
+          <div class="social">
+            <a href="https://www.facebook.com/" target="_blank"
+              ><i class="fab fa-facebook fa-1x"></i
+            ></a>
+            <a href="https://www.twitter.com/" target="_blank"
+              ><i class="fab fa-twitter fa-1x"></i
+            ></a>
+            <a href="https://www.instagram.com/" target="_blank"
+              ><i class="fab fa-instagram fa-1x"></i
+            ></a>
+            <a href="https://www.youtube.com/" target="_blank"
+              ><i class="fab fa-youtube fa-1x"></i
+            ></a>
+          </div>
+        </div>
+        <div class="acount"><i class="far fa-address-card"></i>Welcome: Khongorzul</div>
+          
         </div>
       </div>
     </nav>
 
     <!--  inputbox -ын хэсэг  -->
-    <div class="bottom">
-      <div class="add">
-        <div class="add__container">
-          <input
-            type="text"
-            class="add__description"
-            placeholder="Add description"
-          />
-          <input type="submit" class="add__value" placeholder="Value" />
-        </div>
+    <div class="btn">
+      <div class="button__container">
+        <input
+          type="text"
+          id="add__value"
+          class="add__value"
+          placeholder="Value "
+        />
+        <input
+          type="text"
+          id="add__description"
+          class="add__description"
+          placeholder="Add description "
+        />
+        <input
+          type="submit"
+          id="submit__button"
+          class="submit__button"
+          value="Хадгалах"
+        />
       </div>
     </div>
 
     <!-- Хүснэгтийн хэсэг -->
-    <div class="grid">
-      <div class="item item-1">Өгүүлбэр</div>
-      <div class="item">Цээжлэгдэхгүй байгаа үгнүүд</div>
-      <div class="item">Өнөөдөр цээжилсэн үг болон тоо</div>
-      <div class="item">Хаяа мартчихдаг үгнүүд</div>
-      <div class="item">7 хоногын өмнө цээжилсэн үг болон тоо</div>
-      <div class="item">Хэзээч мартхааргүй үгнүүд</div>
-      <div class="item">1 сарын өмнө цээжилсэн үг болон тоо</div>
-      <div class="item">Dictionary</div>
-      <div class="item">Миний мэддэг нийт үгийн тоо, үгнүүд</div>
+    <div class="main">
+      <div class="grid">
+        <div class="item item-1">Өгүүлбэр</div>
+        <div class="item">
+          <h3>Цээжлэгдэхгүй байгаа үгнүүд</h3>
+          <input type="submit"id="main__button"class="main__button" value="Орох"  />
+        </div>
+        <div class="item">Өнөөдөр цээжилсэн үг болон тоо
+          <input
+          type="submit"
+          id="main__button"
+          class="main__button"
+          value="Орох"
+        />
+        </div>
+        <div class="item">Хаяа мартчихдаг үгнүүд <input type="submit"id="main__button"class="main__button" value="Орох"  /></div>
+        <div class="item">7 хоногын өмнө цээжилсэн үг болон тоо <input type="submit"id="main__button"class="main__button" value="Орох"  /></div>
+        <div class="item">Хэзээч мартхааргүй үгнүүд <input type="submit"id="main__button"class="main__button" value="Орох"  /></div>
+        <div class="item">1 сарын өмнө цээжилсэн үг болон тоо <input type="submit"id="main__button"class="main__button" value="Орох"  /></div>
+        <div class="item">Dictionary<input type="submit"id="main__button"class="main__button" value="Орох"  /></div>
+        <div class="item">Миний мэддэг нийт үгийн тоо, үгнүүд <input type="submit"id="main__button"class="main__button" value="Орох"  /></div>
+      </div>
     </div>
     <!-- Footer -ын хэсэг -->
     <footer class="footer">
       <p>Бүх эрх хуулиар хамгаалагдсан.</p>
     </footer>
+
+    <script src="app.js"></script>
   </body>
 </html>

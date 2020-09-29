@@ -1,0 +1,10 @@
+Class component Function component 2 анх react  ялгадаг байсан. Class component нь дотороо төлөвтэй.  Function component нь дотороо төлөвгүй байсан. 
+
+ Function component нь --> дэлгэцэн дээр эх component-аас ирсэн өгөгдлүүдийг html -д угсараад үзүүлдээд буцаагаад эх component дамжуулдаг зүгэээр pressention маягын энгийн component хийдэг байсан. 
+
+ Class component --> дотороо component хадгалаад тэрийгээ өөр өөр component дамжуулаад олон component нийлүүлж удирддаг нарийн зүйлсийг хийнэ гэж react анх үзсэн.  
+ Явандаа reat-ын class нь амьдралын циклын функцууд нь хүндрэл үзүүлж ирсэн. Ингээд ирэнгүүт  
+ Function component руугаа  component нь ч хүртэл дотороо төлөв ашиглах боломжыг нэмж өгсөн байгаа. Энэ нь тусгай hooks ойлголтоор function орж өгдөг байгаа. 
+
+ React-ын hooks ойлголт нь энд тэнд байж байгаа функцын state төлөвүүдийг Function component дотор оруулаад ирдэг. Мөн Function component дотор өөрт зориулж шинээр us state төлөв үүсгэдэг.  Class VS Function чадвар нь яг ижилхэн боолсон. 
+ Class component илүү нь тусдаа салангад амьдралын циклын функцуудгүй төлөвгүй бүх юмыг нэг газараас хүлээж авах боломжтой байдаг учираас  илүү болсон.  
