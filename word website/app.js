@@ -1,13 +1,15 @@
 // Дэлгэцтэй ажиллах контроллер
 const uiController = (function () {
   let DOMstrings = {
-    inputDescription: "add__description",
-    addBtn: "submit_button",
+    inputValue: ".add__value",
+    inputDescription: ".add__description",
+    addBtn: ".submit__button",
   };
   return {
     getInput: function () {
       return {
-        description: document.getElementById(DOMstrings.inputDescription).value,
+        value: document.querySelector(DOMstrings.inputValue).value,
+        description: document.querySelector(DOMstrings.inputDescription).value,
       };
     },
     getDOMstring: function () {
@@ -16,23 +18,45 @@ const uiController = (function () {
   };
 })();
 // Хагдгалах контроллер
-const saveController = (function () {})();
+const saveController = (function () {
+  const Income = function (value, description) {
+    this.value = value;
+    this.description = description;
+  };
+
+  const data = {
+    items: {
+      inc: [],
+    },
+    totalIcomes: {
+      inc: 0,
+    },
+  };
+  return {
+    addItem: function (val, desc) {
+      data.items.inc.push(val desc);
+      console.log("item  added ===>" + data.items.inc);
+    },
+  };
+})();
 
 // Холбох контроллер
-const appController = (function (uiController, saveController) {
-  let DOM = uiController.getDOMstring();
+var appController = (function (uiController, saveController) {
   let ctrlAddItem = function () {
     //  1. Оруулах өгөгдлийг дэлгэцээс олж авна.
     let input = uiController.getInput();
+    // console.log(input);
     //  2.  Олж авсан өгөгдлөө хадгалах контроллерт дамжуулж тэнд хадгална.
+    saveController.addItem(input.value, input.description);
+
     //  3. Олж авсан өгөгдлөө вэб дээрээ дохирох газар (Өгүүлбэр хэсэгт) гаргана.
     //  4. Өгөгдлүүдээ тоцоолол хийнэ
     //  5. Тоцоолол хийсэн өгөгдлүүдээ тус бүрийн цонхонд нэмнэ
     //  6. Тоцоолол хийсэн өгөгдлүүдээ вэб дээрээ дохирох газар гаргана.
   };
-
-  let setupEventListeners = function () {
-    document.getElementById(DOM.addBtn).addEventListener("click", function () {
+  const setupEventListeners = function () {
+    let DOM = uiController.getDOMstring();
+    document.querySelector(DOM.addBtn).addEventListener("click", function () {
       ctrlAddItem();
     });
     document.addEventListener("keypress", function (event) {
@@ -41,6 +65,7 @@ const appController = (function (uiController, saveController) {
       }
     });
   };
+
   return {
     init: function () {
       console.log("Application started...");
@@ -48,4 +73,5 @@ const appController = (function (uiController, saveController) {
     },
   };
 })(uiController, saveController);
-// appController.init();
+
+appController.init();
