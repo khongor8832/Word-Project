@@ -100,6 +100,27 @@ body {
   font-weight: bold;
   text-align: center;
 }
+.item-1 {
+  padding: 2rem 1rem;
+  background-color: #74d2e7;
+}
+.content {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+  border: 1px solid black;
+}
+.content__value {
+  background-color: #8ec06c;
+  border: 1px solid black;
+  width: 50%;
+}
+.content__description {
+  background-color: #537b35;
+  border: 1px solid black;
+  width: 50%;
+}
+
 .main__button {
   background: linear-gradient(90deg, #0162c8, #55e7fc);
   border-radius: 3px;
