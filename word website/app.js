@@ -19,23 +19,38 @@ const uiController = (function () {
 })();
 // Хагдгалах контроллер
 const saveController = (function () {
-  const Income = function (value, description) {
+  // privite
+  const Income = function (id, value, description) {
+    this.id = id;
     this.value = value;
     this.description = description;
   };
-
+  // privite
   const data = {
     items: {
       inc: [],
     },
-    totalIcomes: {
-      inc: 0,
-    },
+    // total: {
+    // inc: 0
+    // }
   };
   return {
     addItem: function (val, desc) {
-      data.items.inc.push(val desc);
-      console.log("item  added ===>" + data.items.inc);
+      // deerh ene 2 val, desc doorh delgetsnees awch bga utga ym input.value, input.description
+      var item, id;
+
+      // deerh ene 2 val, desc argumantseer orj irsen utga
+      if (data.items.inc.length === 0) id = 1;
+      else {
+        id = data.items.inc[data.items.inc.length - 1].id + 1;
+      }
+      item = new Income(id, val, desc);
+      // deerh ene 2 val, desc argumantseer orj irsen utga
+
+      data.items.inc.push(item);
+    },
+    seeData: function () {
+      return data;
     },
   };
 })();
@@ -48,6 +63,7 @@ var appController = (function (uiController, saveController) {
     // console.log(input);
     //  2.  Олж авсан өгөгдлөө хадгалах контроллерт дамжуулж тэнд хадгална.
     saveController.addItem(input.value, input.description);
+    // console.log(saveController.seeData());
 
     //  3. Олж авсан өгөгдлөө вэб дээрээ дохирох газар (Өгүүлбэр хэсэгт) гаргана.
     //  4. Өгөгдлүүдээ тоцоолол хийнэ
